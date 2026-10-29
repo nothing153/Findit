@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>🔎 FindIt</h1>
+        <p>Lost something? Let's find it!</p>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Lost it. Found it. FindIt.</h2>
+            <p>Never lose hope of finding your belongings again!</p>
+        </section>
+
+        <section class="add-section">
+            <h2>Post an Item</h2>
+
+            <form id="itemForm">
+                <input type="text" id="itemName" placeholder="Item name" required>
+
+                <select id="itemType" required>
+                    <option value="Lost">Lost Item</option>
+                    <option value="Found">Found Item</option>
+                   
+                </select>
+
+                <input type="text" id="itemLocation" placeholder="Location " required>
+
+                <input type="datetime-local" id="itemDate" required>
+
+                <textarea id="itemDescription" placeholder="Tell me about items" required></textarea>
+
+                <button type="submit">Post Item</button>
+            </form>
+        </section>
+
+        <section class="items-section">
+            <h2>College Items</h2>
+
+            <input type="text" id="searchInput" placeholder="Search by item, type, or location...">
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="All">All</button>
+                <button class="filter-btn" data-filter="Lost">Lost</button>
+                <button class="filter-btn" data-filter="Found">Found</button>
+            </div>
+
+            <p id="resultCount"></p>
+            <div id="itemsContainer" class="items-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>FindIt © 2020 | Made for our college Student.....</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
